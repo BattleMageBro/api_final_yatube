@@ -1,9 +1,9 @@
 from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import permissions
 from rest_framework import viewsets, generics, filters
 from .models import Post, Comment, Follow, Group
 from . import serializers
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import permissions
 from .permissions import IsAuthorOrReadOnly
 
 
